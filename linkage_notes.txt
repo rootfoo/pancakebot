@@ -1,0 +1,40 @@
+g = ground link
+s = input link (driven by motor)
+p = output link
+l = coupler
+
+rocking motion: s+l < p+q
+
+closest to 180 rocker, is also the fastest to flip:
+    g = l        # ground link must equal coupler for best 180 motion
+    g = l = p    # all other variables equal
+    s < p        # input link is marginally shorter than output
+
+    e.g. 
+    1) very fast, nearly 180 flip:
+        q = l = p = 40cm
+        s = 39cm
+
+    2) a little slower, nearly 180
+        q = l = 40cm
+        p = 37cm
+        s = 36cm
+
+    3) slow, close to 180
+        q = l = 40cm
+        p = 16cm
+        s = 15cm
+
+    4) decent balance
+        q = l = 26
+        p = 21
+        s = 20
+
+    observations:
+        with constant rpm, shorter links means slower travel (proportional to circumference)
+        input link less than output link also prevent interference of axis
+        the longer the ground link, the smoother the motion. Shorter groundlink create more whip
+            
+
+experiment at: 
+    http://dynref.engr.illinois.edu/aml.html#aml-sl 
